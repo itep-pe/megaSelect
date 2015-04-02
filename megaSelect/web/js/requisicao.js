@@ -52,6 +52,8 @@ $(document).ready(function () {
             data: dataString,
             success: function (data, textStatus, jqXHR) {
                 $("select[name=eixo] option").remove();
+                $("select[name=servico] option").remove();
+                $("select[name=campanha] option").remove();
                 var pegadados = data.split("/");
                 for (var i = 0; i < pegadados.length - 1; i++) {
                     var idEixo = pegadados[i].split("-")[0];
@@ -89,6 +91,7 @@ $(document).ready(function () {
             data: dataString,
             success: function (data, textStatus, jqXHR) {
                 $("select[name=servico] option").remove();
+                $("select[name=campanha] option").remove();
                 var pegadados = data.split("/");
                 for (var i = 0; i < pegadados.length - 1; i++) {
                     var idServico = pegadados[i].split("-")[0];
